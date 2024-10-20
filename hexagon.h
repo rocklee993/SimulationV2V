@@ -9,8 +9,8 @@ public:
     void draw(QPainter &painter) const;
 
 private:
-    float x, y;  // Center coordinates
-    float radius; // Radius of the hexagon
+    float x, y;
+    float radius;
 };
 
 #endif // HEXAGON_H

@@ -3,28 +3,28 @@
 #include <cmath>
 
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent), numRows(20), numCols(30), radius(40) { // Adjust radius as needed
+    : QMainWindow(parent), numRows(20), numCols(30), radius(40) {
     generateHexagons();
-    resize(1200, 800); // Set the desired width and height for the window
+    resize(1200, 800);
 }
 
 MainWindow::~MainWindow() {}
 
 void MainWindow::generateHexagons() {
-    float hexHeight = sqrt(3) * radius; // Calculate height based on radius
+    float hexHeight = sqrt(3) * radius;
 
     for (int row = 0; row < numRows; ++row) {
         for (int col = 0; col < numCols; ++col) {
-            // Calculate x position
-            float x = col * (1.5 * radius); // Space between columns
 
-            // Calculate y position
-            float y = row * hexHeight; // Base vertical position
+            float x = col * (1.5 * radius);
+
+
+            float y = row * hexHeight;
             if (col % 2 != 0) {
-                y += hexHeight / 2; // Offset for odd columns
+                y += hexHeight / 2;
             }
 
-            hexagons.push_back(Hexagon(x, y, radius)); // Create the hexagon
+            hexagons.push_back(Hexagon(x, y, radius));
         }
     }
 }

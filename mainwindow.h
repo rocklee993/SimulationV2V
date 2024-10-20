@@ -16,11 +16,11 @@ protected:
     void paintEvent(QPaintEvent *event) override;
 
 private:
-    void generateHexagons(); // Declaration of the function
-    std::vector<Hexagon> hexagons; // Vector to store hexagons
+    void generateHexagons();
+    std::vector<Hexagon> hexagons;
     int numRows;
     int numCols;
-    float radius; // Radius of the hexagons
+    float radius;
 };
 
 #endif // MAINWINDOW_H

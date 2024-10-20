@@ -4,15 +4,15 @@
 
 Hexagon::Hexagon(float x, float y, float radius) : x(x), y(y), radius(radius) {}
 
-void Hexagon::draw(QPainter &painter) const { // Add const here
-    painter.setBrush(Qt::lightGray); // Fill color
-    painter.setPen(Qt::black); // Outline color
+void Hexagon::draw(QPainter &painter) const {
+    painter.setBrush(Qt::lightGray);
+    painter.setPen(Qt::black);
 
-    // Calculate the points of the hexagon
+
     QPointF points[6];
     for (int i = 0; i < 6; ++i) {
-        double angle = M_PI / 3 * i; // 60 degrees in radians
-        points[i] = QPointF(x + radius * cos(angle), y + radius * sin(angle)); // Adjust the size
+        double angle = M_PI / 3 * i;
+        points[i] = QPointF(x + radius * cos(angle), y + radius * sin(angle));
     }
 
     painter.drawPolygon(points, 6); // Draw the hexagon
