@@ -14,6 +14,7 @@ SOURCES += \
     mainwindow.cpp
 
 HEADERS += \
+    car.h \
     hexagon.h \
     mainwindow.h
 
